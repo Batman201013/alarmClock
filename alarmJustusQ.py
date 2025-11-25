@@ -1,6 +1,9 @@
 """Simple Python script to set an alarm for a specific time.
    When the alarm goes off, a random string will be shown.
    The possible Strings are taken from "alarm_names.txt"
+   the alarm produces a sound on a Mac until the mouse is moved or clicked
+   when the mouse is only moved the alarm clock goes snoozing for 10 seconds
+   when the mouse is pressed the alarm stops
 """
 
 import datetime
@@ -84,7 +87,7 @@ if time_diff_seconds < 0:
 print("Alarm set to go off in %s" % datetime.timedelta(seconds=time_diff_seconds))
 
 # Sleep until the alarm goes off
-#time.sleep(time_diff_seconds)
+time.sleep(time_diff_seconds)
 
 # Time for the alarm to go off
 
